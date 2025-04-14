@@ -20,9 +20,11 @@ jobs:
           node-version: '18'
 
       - name: Install Dependencies
+        working-directory: project
         run: npm install
 
       - name: Build Project
+        working-directory: project
         run: npm run build
 
       - name: Run Unit Tests (Disabled)
